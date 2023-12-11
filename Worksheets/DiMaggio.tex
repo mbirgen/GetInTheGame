@@ -1,0 +1,49 @@
+\worksheet{Dicey Hitting Streak}
+
+
+\begin{enumerate}
+\subsection{Did it happen or not?}
+	\item If the probability that something happens is $1/4$, why is the probability that it doesn't happen $1-1/4$? \vfill
+	
+	\item If the probability that something happens is $p$, what is the probability that it doesn't happen? \vfill
+	
+	\subsection{Oddly Enough}
+	\item It is common for people to talk about probabilities with the language of odds. So, something that happens $1/4$ of the time has odds of about one in four.  If you have a probability $p$, you can write down the odd by just letting the second number be $1/p$.
+	
+	\item If the probability that something happens is $0.001$, what are the odds that it happened? \vfill
+	
+\subsection{Did it happen a lot?}
+	
+	\item If the probability that you roll a 1 with your dice is $\frac{1}{6}$, why is the probability that you roll a 1 twice with two rolls $(\frac{1}{6})^2$? \vfill
+	
+	\item If the probability that something happens is $p$, what is the probability that it happens twice in two tries?
+	
+\subsection{Combine the ideas}
+
+	\item What is the probability that you roll a dice three times and only get one ``1''? \vfill
+	
+	\item What is the probability that you and your partner don't have the same birthday? Hint: Assume there are 365 days in a year. \vfill
+	
+	\item What is the probability that no one in the room has the same birthday? \vfill
+	
+	\clearpage
+	\subsection{Hitting Streak}
+	\item Joe DiMaggio got a hit in 56 straight games.
+\begin{enumerate}
+	\item Roll a die.
+	\item If you get a 6, you end the game hitless and Joe wins the contest. Else, you get a hit in one game.
+	\item Keep track of your progress with the chart below, through 56 games or until your streak ends.
+\end{enumerate}
+\begin{center}
+		\begin{tikzpicture}
+	%\node at (0,0) {$\checkmark$};
+		 \foreach \x in {1,...,14}{
+		\foreach \y in {0,...,3}{
+       \node [inner sep=10pt, draw] at  (\x,\y)  {};
+       }
+			}
+	\end{tikzpicture}
+\end{center}
+
+\item What is the probability that you match Joe's streak?  What are the odds of that happening?
+\end{enumerate}

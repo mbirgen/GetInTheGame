@@ -1,0 +1,109 @@
+\documentclass{article}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[letterpaper, margin=.75in]{geometry}
+\usepackage{multicol}
+\usepackage{graphpap}
+%\usepackage{pdfpages}
+%\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\usepackage{tabularx}
+\usepackage{framed}
+\usepackage{tikz}
+\usepackage{pgfplots}
+% \usepackage{tcolorobox}
+
+\usetikzlibrary{arrows, calc, patterns, positioning, shapes}
+\newcommand{\degree}{$^{\circ}$}
+\newcounter{probno}[enumi]
+\newcommand{\hitem}{\hfill \stepcounter{probno} (\roman{probno})\hspace{1em}}
+\newenvironment{hnumerate}{\begin{center}}{\hfill\setcounter{probno}{0}\end{center}}
+\pgfplotsset{compat=1.9}
+
+% change hyperref options
+\PassOptionsToPackage{hyphens}{url}
+\usepackage[bookmarks,colorlinks,linkcolor=blue,citecolor=blue,pdfstartview=FitH,urlcolor=blue]{hyperref}
+
+\newcounter{currentyear}
+\setcounter{currentyear}{2023}
+
+\newcounter{eqnno}[enumi]
+\newcommand{\eqn}{\stepcounter{eqnno} (\theeqnno) \label{05table\theeqnno}}
+
+\newenvironment{teacher}[1]{\begin{center}
+	\textbf{#1}
+\end{center}\vspace{-3ex}\begin{framed}}{\end{framed}}
+
+\newcommand{\goals}[1]{
+\fbox{
+\parbox{\textwidth}{
+  \textbf{\textsf{ \large Student learning objectives:}}
+    #1
+}
+}
+  % \begin{tcolorbox}[colframe=purple, colback=purple!10!white]
+
+  % \end{tcolorbox}
+  }
+
+\newif\ifteacher
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+ \newcounter{saveenumi}
+ \newcounter{saveenumi1}
+\newtheorem{qkrev}{Quick Review Question}
+ 
+\setcounter{saveenumi}{0}
+\newenvironment{countme}{\begin{enumerate} \setcounter{enumi}{\thesaveenumi}}{\setcounter{saveenumi}{\theenumi} \end{enumerate}}
+\newenvironment{multic}[1]{\begin{multicols}{#1}\begin{countme}}{\end{countme}\end{multicols}}
+
+\newcounter{sectno} \newcounter{chaptno}
+\newcommand{\question}[1]{\noindent \textbf{#1 Point Question:} \\}
+\newcommand{\worksheet}[1]{\Large \textbf{Chapter \thechaptno}  \hfill  IS 101 \section{#1} \par \normalsize}
+%\newcommand{\vensim}{\emph{Vensim} \textsuperscript{\textregistered} PLE }
+
+\newcommand*\cleartooddpage{%
+  \clearpage%
+  \ifodd\value{page} \else\thispagestyle{empty}\begin{center}\em This page intentionally left blank.\end{center}\clearpage\fi}
+
+\includeonly{
+%Curry,
+%DiMaggio,
+%Uconn,
+%Unbreakable,
+%NFLPlayoff,
+%FIFA,
+%Fridge,
+%Morgan,
+%Tiger,
+Moneyball,
+}
+
+
+\begin{document}
+\setcounter{chaptno}{2}
+\include{Curry}
+\stepcounter{chaptno}
+\include{DiMaggio}
+\stepcounter{chaptno}
+\include{Uconn}
+\stepcounter{chaptno}
+\include{Unbreakable}
+\stepcounter{chaptno}
+\include{NFLPlayoff}
+
+\stepcounter{chaptno}
+\include{FIFA}
+\stepcounter{chaptno}
+\include{Fridge}
+
+\stepcounter{chaptno}
+\include{Morgan}
+
+\stepcounter{chaptno}
+\include{Tiger}
+\stepcounter{chaptno}
+\include{Moneyball}
+\end{document}

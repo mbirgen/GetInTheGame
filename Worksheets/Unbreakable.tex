@@ -1,0 +1,81 @@
+\worksheet{Unbreakable Tennis}
+The first player to win four or more points and be ahead by two points wins the \textbf{game}. In tennis, the score begins at ``love,'' or zero points. Wining a point takes a player to 15, then 30, then 40, and then game point, which wins the game unless the players are tied 40-40, which is called a ``deuce,'' From deuce, the game proceeds until a player pulls ahead by two points.
+\begin{enumerate}
+	\item Serve like Agassi
+	\begin{itemize}
+		\item First serve: flip a coin three times.
+		\begin{itemize}
+			\item If exactly two tails, serve is out. Go to second serve.
+			\item Else, serve is in. Play proceeds: flip a coin two times.
+			\begin{itemize}
+				\item If exactly two tails, Agassi loses the point.
+				\item Else, Agassi winds the point.
+			\end{itemize}
+			\item Second serve: flip a coin one time.
+			\begin{itemize}
+				\item If tails, Agassi loses the point.
+				\item If heads, Agassi wins the point.
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+	Practice playing as Agassi.
+	
+	\begin{tabular}{*{13}{c}}
+	Game  & Initials&\\
+	\hline
+	1 & & S: & 15 & 30 & 40 & S &S &S &S &S &S &S\\
+	&&    R: & 15 & 30 & 40 & R &R &R &R &R &R &R\\ \hline
+	%2 & & S: & 15 & 30 & 40 & S &S &S &S &S &S &S\\
+	%&&    R: & 15 & 30 & 40 & R &R &R &R &R &R &R\\ \hline
+	%3 & & S: & 15 & 30 & 40 & S &S &S &S &S &S &S\\
+	%&&    R: & 15 & 30 & 40 & R &R &R &R &R &R &R\\ \hline
+	%4 & & S: & 15 & 30 & 40 & S &S &S &S &S &S &S\\
+	%&&    R: & 15 & 30 & 40 & R &R &R &R &R &R &R\\ \hline
+	%5 & & S: & 15 & 30 & 40 & S &S &S &S &S &S &S\\
+	%&&    R: & 15 & 30 & 40 & R &R &R &R &R &R &R\\ \hline
+	%6 & & S: & 15 & 30 & 40 & S &S &S &S &S &S &S\\
+	%&&    R: & 15 & 30 & 40 & R &R &R &R &R &R &R\\ \hline
+	\end{tabular}
+	
+	\item Play like Sampras
+	\begin{itemize}
+		\item You can ask the computer to calculate a random number between 0 and 1 by typing \texttt{= RAND()} into either Excel or Google Sheets.
+		\item Pick a random number between 0 and 1. If the number is less than 0.5947, Samparas's first serve goes in.
+		\item If the first serve goes in, pick another uniform random number between 0 and 1. It it is less than 0.8092, then Sampras wins the point.
+		\item If the first serve didn't go in, pick a uniform random number between 0 and 1 for the second serve, and if it is less than 0.5261, then Sampras wins the point.
+	\end{itemize}
+	Practice playing as Sampras for one game:
+	
+	\begin{tabular}{*{13}{c}}
+	Game  & Initials&\\
+	\hline
+	1 & & S: & 15 & 30 & 40 & S &S &S &S &S &S &S\\
+	&&    R: & 15 & 30 & 40 & R &R &R &R &R &R &R\\ \hline\end{tabular}
+	
+	\clearpage
+	\item Now have them play each other:
+	
+	\begin{tabular}{*{13}{c}}
+	Game  & Initials&\\
+	\hline
+	1 & & S: & 15 & 30 & 40 & S &S &S &S &S &S &S\\
+	&&    R: & 15 & 30 & 40 & R &R &R &R &R &R &R\\ \hline
+	2 & & S: & 15 & 30 & 40 & S &S &S &S &S &S &S\\
+	&&    R: & 15 & 30 & 40 & R &R &R &R &R &R &R\\ \hline
+	3 & & S: & 15 & 30 & 40 & S &S &S &S &S &S &S\\
+	&&    R: & 15 & 30 & 40 & R &R &R &R &R &R &R\\ \hline
+	4 & & S: & 15 & 30 & 40 & S &S &S &S &S &S &S\\
+	&&    R: & 15 & 30 & 40 & R &R &R &R &R &R &R\\ \hline
+	5 & & S: & 15 & 30 & 40 & S &S &S &S &S &S &S\\
+	&&    R: & 15 & 30 & 40 & R &R &R &R &R &R &R\\ \hline
+	6 & & S: & 15 & 30 & 40 & S &S &S &S &S &S &S\\
+	&&    R: & 15 & 30 & 40 & R &R &R &R &R &R &R\\ \hline
+	\end{tabular}
+	
+	\item Calculate the probability of a set reaching a 6-6 tie with neither player losing serve:
+	\begin{itemize}
+		\item The probability that Sampras wins one straight service game is 0.89. What is the probability that he wins 6 straight service games? \underline{\vspace{1in}}
+		\item The probability that Agnassi wins one straight service game is 0.84. What is the probability that he wins 6 straight service games? \underline{\vspace{1in}}
+		\item The probability that they reach 6-6 is the product of your two answers:  \underline{\vspace{1in}} What is the probability that they play four sets with neither player losing serve?  \underline{\vspace{1in}}
+	\end{itemize}
+\end{enumerate}

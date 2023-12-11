@@ -1,0 +1,18 @@
+\worksheet{NFL Drive}
+
+Roll a die four times to determine the outcome of your NFL possession:
+
+\begin{itemize}
+	\item Safety -- if you roll four 2's, four 3's, four 4's, or four 5's, giving a probability of 4/1296 = 0.003
+	\item Touchdown -- if you roll
+	\begin{itemize}
+		\item 1 on the first roll, giving \(6^3=216\) options or 
+		\item 2-3 or 3-4 on the fist two rolls giving an additional \(2\times 6^2\) 
+	\end{itemize}
+	\item Field goal -- if you roll 6 on the first roll, giving a probability of \(6^3/6^4 = 0.17\).
+	
+	\hline
+	When you score a touchdown you get 6 points. Determine if you add 0, 1, or 2 additional points by rolling a die twice. Note that the two-point conversions are attempted after a touchdown \(113/(113+1210)\), or 8.5\% of the time.
+	\item If you roll 1-1, 2-2, or 3-3, you are attempting a two-point conversion, which equates to a probability of \((3\times6^2)/6^4\), or 8.3\%. Roll one die a third time, and if you get  1, 2, 3 you score 2 points, which occurs 50\% of the time.
+	\item Otherwise (if you didn't roll 1-1, 2-2, or 3-3) you are attempting an extra point. Roll one die two more times. If you roll anything but 1-1, or 2-2, you score 1 point, which occurs with a probability equal to \(1-(2\times 6^2)/6^4 = 0.944\).
+\end{itemize}
